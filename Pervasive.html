@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Step Strive</h1>
+        <h2>A HEALTH & FITNESS ACTIVITY TRACKER</h2>
+
+        <div class="profile">
+            <span id="username">Rishi</span> <!-- Replace with actual name -->
+        </div>
+
+        <div class="select-dropdown">
+            <label for="activity">Select activity:</label>
+            <select id="activity">
+                <option value="sitting">Sitting</option>
+                <option value="walking">Walking</option>
+                <option value="standing">Standing</option>
+            </select>
+        </div>
+<p></p>
+        <div class="select-dropdown">
+            <label for="targetDuration">Select target duration:</label>
+            <select id="targetDuration">
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+            </select>
+        </div>
+
+        <div class="duration-info">
+            <p>Duration completed: <span id="completed">-</span> minutes</p>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+            <p id="progressText">0% completed</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
