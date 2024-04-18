@@ -1,0 +1,20 @@
+import serial
+
+# Open the serial port, change the port name, and baudrate as needed
+ser = serial.Serial('COM9', 9600)
+
+# Open a text file for writing sensor data
+with open('sensor_data.txt', 'w') as file:
+    try:
+        # Continue reading data until interrupted
+        while True:
+            # Read a line of data from the serial port
+            line = ser.readline().decode().strip()
+            # Write the line to the text file
+            file.write(line + '\n')
+            # Print the line to the console for verification
+            print(line)
+    except KeyboardInterrupt:
+        # Close the serial port and the text file when interrupted
+        ser.close()
+        print("Program terminated, serial port closed.")
